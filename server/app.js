@@ -18,14 +18,14 @@ const app = express();
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true }));
 
-// Enable CORS for a specific origin
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header("Access-Control-Allow-Credentials", true);
   next();
 });
 
-// Rest of your server codeسسس
+
 
 app.use(cors());
 app.use(helmet());
